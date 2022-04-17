@@ -27,8 +27,9 @@ public class Procedure {
 		driver.get(url);
 	}
 	
-	public void closeBrowser() {
+	public void closeBrowser() throws InterruptedException {
 		
+		Thread.sleep(2000);
 		driver.quit(); //To close all the windows
 	}
 	
@@ -75,12 +76,25 @@ public class Procedure {
 		addCart = new AddToCart(driver);
 		addCart.selectOptionName();
 		addCart.selectCasualDresses();
+		addCart.viewDress();
+		addCart.addDresses();
+		addCart.continueShopping();
 		addCart.selectTshirt();
+		addCart.blueFilter();
+		addCart.viewTshirt();
+		addCart.selectColor();
+		addCart.addTshirt();
 	}
 	
 	public void buy() throws InterruptedException {
 		checkout = new Checkout(driver);
 		checkout.proceedToCheckout();
+		checkout.proceedToCheckout1();
+		checkout.proceedToCheckout2();
+		checkout.clickAgreement();
+		checkout.proceedToCheckout3();
+		checkout.clickPayment();
+		checkout.clickConfirm();
 	}
 	
 	public void signin(Profile profile) {

@@ -25,15 +25,38 @@ public class Checkout {
 	}
 	
 	public void proceedToCheckout() throws InterruptedException {
+		
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(checkout)).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(proceedToCheckout)).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(next)).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(agree)).click();
-		driver.findElement(proceed).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(payment)).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(confirm)).click();
-		
 	}
 	
+	public void proceedToCheckout1()
+	{
+		wait.until(ExpectedConditions.visibilityOfElementLocated(proceedToCheckout)).click();
+	}
+	
+	public void proceedToCheckout2()
+	{
+		wait.until(ExpectedConditions.visibilityOfElementLocated(next)).click();
+	}
+	
+	public void clickAgreement()
+	{
+		wait.until(ExpectedConditions.visibilityOfElementLocated(agree)).click();
+	}
+	
+	public void proceedToCheckout3()
+	{
+		driver.findElement(proceed).click();
+	}
+	
+	public void clickPayment()
+	{
+		wait.until(ExpectedConditions.visibilityOfElementLocated(payment)).click();
+	}
+	
+	public void clickConfirm()
+	{
+		wait.until(ExpectedConditions.visibilityOfElementLocated(confirm)).click();
+	}
 }
