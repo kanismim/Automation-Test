@@ -41,7 +41,7 @@ public class Procedure {
 		//email genaration
 		Thread.sleep(2000);
 		int randomInt = randomGenerator. nextInt(10000);
-		String email1 = "username"+ randomInt +"@mail.com";
+		String email1 = "username"+ randomInt +"@mailtest.com";
 		profile.email= email1;
 		driver.findElement(By.id("email_create")).sendKeys(email1);
 		driver.findElement(By.name("SubmitCreate")).click();
